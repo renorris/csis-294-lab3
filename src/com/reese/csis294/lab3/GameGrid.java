@@ -79,9 +79,13 @@ public class GameGrid {
             for (int column = 0; column < grid[1].length; column++) {
                 if (playerYPos == row && playerXPos == column) {
                     result.append(" X ");
+                    // █ ■
+                }
+                else if (grid[row][column] == 1) {
+                    result.append(" ■ ");
                 }
                 else {
-                    result.append(" " + grid[row][column] + " ");
+                    result.append("   ");
                 }
             }
             result.append(" |\n");
